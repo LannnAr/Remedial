@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f5f9ff;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 0.7rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+  margin: 0.2rem 0;
+  font-size: 1.5rem;
+}
+nav {
+  margin-top: 0.3rem;
+}
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #e0ecff, #f5faff);
+  border: 2px solid #b0cfff;
+  box-shadow: 0 0 10px rgba(0, 64, 128, 0.15);
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+.hero img {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.hero h2 {
+  margin: 0.5rem 0;
+}
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.hero button {
+  background-color: #007BFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+.hero button:hover {
+  background-color: #005fc4;
+}
+.detail {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Produk */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Pusatkan item */
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.product {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.07);
+  font-size: 0.95rem;
+  transition: transform 0.2s;
+  width: 260px;
+}
+.product:hover {
+  transform: scale(1.02);
+}
+.product img.product-img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 0.7rem;
+  border-radius: 6px;
+}
+.product h3 {
+  margin: 0.5rem 0 0.3rem;
+}
+.product button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.product button:hover {
+  background-color: #b30000;
+}
+
+/* Form Tambah Produk */
+.form-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #e9f1fb;
+  max-width: 700px;
+  margin: 2rem auto;
+  border-radius: 12px;
+}
+.form-section h2 {
+  margin-bottom: 1rem;
+}
+.form-section input,
+.form-section textarea {
+  margin: 0.5rem;
+  padding: 0.6rem;
+  width: 250px;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+textarea {
+  resize: vertical;
+}
+.form-section button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.form-section button:hover {
+  background-color: #005fc4;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
+  font-size: 0.85rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.modal-content p {
+  font-size: 1rem;
+}
+.modal-content button {
+  margin: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  border-radius: 6px;
+}
+#btnYa {
+  background-color: #4a93e0;
+  color: white;
+}
+#btnYa:hover {
+  background-color: #226fc2;
+}
+#btnBatal {
+  background-color: #ccc;
+}
+#btnBatal:hover {
+  background-color: #aaa;
+}
+
+
+@media (max-width: 600px) {
+  .form-section input,
+  .form-section textarea {
+    width: 90%;
+  }
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+}

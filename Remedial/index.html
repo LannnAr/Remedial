@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Laptop Kece</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Laptop Kece</h1>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Produk</a>
+      <a href="#">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="img/laptop.jpg" alt="Laptop">
+    <h2>Laptop Terkece - YYBOOK X</h2>
+    <p>Ringan, cepat, dan buatan anak bangsa!</p>
+    <button onclick="toggleDetail()">Lihat Detail</button>
+    <div class="detail" id="detailSpesifikasi">
+      <p>RAM: 16GB<br>Storage: 512GB SSD<br>Prosesor: Intel i7</p>
+    </div>
+  </section>
+
+  <section class="product-list" id="productList">
+    
+  </section>
+
+  <section class="form-section">
+    <h2>Tambah Produk Baru</h2>
+    <input type="text" id="nama" placeholder="Nama Produk"><br>
+    <textarea id="deskripsi" placeholder="Deskripsi"></textarea><br>
+    <input type="number" id="harga" placeholder="Harga"><br>
+    <button onclick="tambahProduk()">Tambah Produk</button>
+  </section>
+
+  <footer>
+    <p>© 2025 LaptopKece | Created by Fadlan Xpplg3</p>
+  </footer>
+
+
+  <div class="modal" id="popupHapus">
+    <div class="modal-content">
+      <p>Yakin ingin menghapus produk ini?</p>
+      <button id="btnYa">Ya</button>
+      <button id="btnBatal">Batal</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
